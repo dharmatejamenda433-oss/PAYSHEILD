@@ -1,0 +1,167 @@
+# Per-file commit manifest
+
+Every project file was committed individually on `main`. The repository seed is commit `375e10a` (the initial commit).
+
+The table below is generated from the local commit history. The manifest file itself is committed immediately after these entries.
+
+| # | File | Commit | Message |
+|---:|---|---|---|
+| 1 | `.env.example` | `78d8e48bd8f8` | docs(config): add root environment example |
+| 2 | `.gitignore` | `0799777ebe30` | chore(repo): add .gitignore |
+| 3 | `backend/.dockerignore` | `046cb8108486` | build(infra): add backend/.dockerignore |
+| 4 | `backend/.env.example` | `804add921f5a` | docs(config): add backend/.env.example |
+| 5 | `backend/Dockerfile` | `db7f682c8908` | build(infra): add backend/Dockerfile |
+| 6 | `backend/package-lock.json` | `f051b986a516` | chore(backend): add backend/package-lock.json |
+| 7 | `backend/package.json` | `10f823b15649` | chore(backend): add backend/package.json |
+| 8 | `backend/src/app.js` | `2381b7799bb9` | feat(backend): add backend/src/app.js |
+| 9 | `backend/src/config/database.js` | `1f86a280c8de` | feat(backend): add backend/src/config/database.js |
+| 10 | `backend/src/config/env.js` | `d28040c39d17` | feat(backend): add backend/src/config/env.js |
+| 11 | `backend/src/config/redis.js` | `43331a6e9a3f` | feat(backend): add backend/src/config/redis.js |
+| 12 | `backend/src/controllers/accountController.js` | `cafc1b224024` | feat(backend): add backend/src/controllers/accountController.js |
+| 13 | `backend/src/controllers/adminController.js` | `0627faef6720` | feat(backend): add backend/src/controllers/adminController.js |
+| 14 | `backend/src/controllers/authController.js` | `8eae7fa19854` | feat(backend): add backend/src/controllers/authController.js |
+| 15 | `backend/src/controllers/healthController.js` | `861aedfb0eeb` | feat(backend): add backend/src/controllers/healthController.js |
+| 16 | `backend/src/controllers/transactionController.js` | `198b18b4d72c` | feat(backend): add backend/src/controllers/transactionController.js |
+| 17 | `backend/src/middleware/authMiddleware.js` | `6dc97c603aca` | feat(backend): add backend/src/middleware/authMiddleware.js |
+| 18 | `backend/src/middleware/errorHandler.js` | `490cb9acd0f7` | feat(backend): add backend/src/middleware/errorHandler.js |
+| 19 | `backend/src/middleware/rateLimiter.js` | `7d7ab3a8fead` | feat(backend): add backend/src/middleware/rateLimiter.js |
+| 20 | `backend/src/middleware/validate.js` | `d0ba875bdb28` | feat(backend): add backend/src/middleware/validate.js |
+| 21 | `backend/src/models/Account.js` | `df72f298eea3` | feat(ml): add backend/src/models/Account.js |
+| 22 | `backend/src/models/Device.js` | `4f47d221a8db` | feat(ml): add backend/src/models/Device.js |
+| 23 | `backend/src/models/FraudAlert.js` | `a723ae3d4c51` | feat(ml): add backend/src/models/FraudAlert.js |
+| 24 | `backend/src/models/LedgerEntry.js` | `4de71a8b4fbb` | feat(ml): add backend/src/models/LedgerEntry.js |
+| 25 | `backend/src/models/Review.js` | `f8601708f8f8` | feat(ml): add backend/src/models/Review.js |
+| 26 | `backend/src/models/Transaction.js` | `cea3ea56a798` | feat(ml): add backend/src/models/Transaction.js |
+| 27 | `backend/src/models/User.js` | `01052de0cdcd` | feat(ml): add backend/src/models/User.js |
+| 28 | `backend/src/routes/accountRoutes.js` | `6c6e33788236` | feat(backend): add backend/src/routes/accountRoutes.js |
+| 29 | `backend/src/routes/adminRoutes.js` | `c4133572b6c0` | feat(backend): add backend/src/routes/adminRoutes.js |
+| 30 | `backend/src/routes/authRoutes.js` | `8d334f54ed02` | feat(backend): add backend/src/routes/authRoutes.js |
+| 31 | `backend/src/routes/index.js` | `ea3cef136a7b` | feat(backend): add backend/src/routes/index.js |
+| 32 | `backend/src/routes/transactionRoutes.js` | `36fcf21ef451` | feat(backend): add backend/src/routes/transactionRoutes.js |
+| 33 | `backend/src/scripts/initReplicaSet.js` | `ecc240c3843d` | feat(backend): add backend/src/scripts/initReplicaSet.js |
+| 34 | `backend/src/scripts/seed.js` | `08465a94585b` | feat(backend): add backend/src/scripts/seed.js |
+| 35 | `backend/src/server.js` | `676e7559f959` | feat(backend): add backend/src/server.js |
+| 36 | `backend/src/services/accountService.js` | `187827986772` | feat(backend): add backend/src/services/accountService.js |
+| 37 | `backend/src/services/adminAnalyticsService.js` | `cc7e2f4810d9` | feat(backend): add backend/src/services/adminAnalyticsService.js |
+| 38 | `backend/src/services/adminFraudService.js` | `766ab26cd5d3` | feat(backend): add backend/src/services/adminFraudService.js |
+| 39 | `backend/src/services/adminReviewService.js` | `ef0596bb5ee6` | feat(backend): add backend/src/services/adminReviewService.js |
+| 40 | `backend/src/services/authService.js` | `edc88cf169bf` | feat(backend): add backend/src/services/authService.js |
+| 41 | `backend/src/services/deviceService.js` | `b68eadda1af9` | feat(backend): add backend/src/services/deviceService.js |
+| 42 | `backend/src/services/fraudPredictionService.js` | `c8333aa0b937` | feat(backend): add backend/src/services/fraudPredictionService.js |
+| 43 | `backend/src/services/fraudRulesService.js` | `3b6ec8f63344` | feat(backend): add backend/src/services/fraudRulesService.js |
+| 44 | `backend/src/services/idempotencyService.js` | `f7da5dda1f8f` | feat(backend): add backend/src/services/idempotencyService.js |
+| 45 | `backend/src/services/ledgerService.js` | `845d427a485e` | feat(backend): add backend/src/services/ledgerService.js |
+| 46 | `backend/src/services/paymentService.js` | `5291ebe4684d` | feat(backend): add backend/src/services/paymentService.js |
+| 47 | `backend/src/services/riskDecisionService.js` | `0d67cc7785db` | feat(backend): add backend/src/services/riskDecisionService.js |
+| 48 | `backend/src/services/tokenService.js` | `39127205f410` | feat(backend): add backend/src/services/tokenService.js |
+| 49 | `backend/src/services/transactionPresenter.js` | `c1fad94cb9f0` | feat(backend): add backend/src/services/transactionPresenter.js |
+| 50 | `backend/src/services/transactionService.js` | `278ed14e3618` | feat(backend): add backend/src/services/transactionService.js |
+| 51 | `backend/src/services/transactionStateService.js` | `06a7fe58a558` | feat(backend): add backend/src/services/transactionStateService.js |
+| 52 | `backend/src/services/velocityService.js` | `e2fc30707787` | feat(backend): add backend/src/services/velocityService.js |
+| 53 | `backend/src/sockets/index.js` | `c4e93d456975` | feat(backend): add backend/src/sockets/index.js |
+| 54 | `backend/src/sockets/socketRegistry.js` | `5e05ed49954f` | feat(backend): add backend/src/sockets/socketRegistry.js |
+| 55 | `backend/src/utils/ApiError.js` | `e82ab24b8a1b` | feat(backend): add backend/src/utils/ApiError.js |
+| 56 | `backend/src/utils/apiResponse.js` | `63362f3d1163` | feat(backend): add backend/src/utils/apiResponse.js |
+| 57 | `backend/src/utils/asyncHandler.js` | `f9abfcf48104` | feat(backend): add backend/src/utils/asyncHandler.js |
+| 58 | `backend/src/utils/ids.js` | `1c3c04fa4732` | feat(backend): add backend/src/utils/ids.js |
+| 59 | `backend/src/validators/authSchemas.js` | `a5bce1af1abc` | feat(backend): add backend/src/validators/authSchemas.js |
+| 60 | `backend/src/validators/transactionSchemas.js` | `95bbbc7bdc15` | feat(backend): add backend/src/validators/transactionSchemas.js |
+| 61 | `backend/tests/api.test.js` | `5f8c06fde538` | test(backend): add backend/tests/api.test.js |
+| 62 | `backend/tests/setupEnv.cjs` | `ede27130816b` | test(backend): add backend/tests/setupEnv.cjs |
+| 63 | `backend/tests/testDb.js` | `1db9b81c8c61` | test(backend): add backend/tests/testDb.js |
+| 64 | `docker-compose.yml` | `357d277e89d1` | build(infra): add Docker Compose stack |
+| 65 | `docs/ARCHITECTURE.md` | `55da42ee0cfe` | docs: add docs/ARCHITECTURE.md |
+| 66 | `fraud-service/.dockerignore` | `fb06c756b39a` | build(infra): add fraud-service/.dockerignore |
+| 67 | `fraud-service/.env.example` | `63cf2b236c86` | docs(config): add fraud-service/.env.example |
+| 68 | `fraud-service/Dockerfile` | `2724931cd078` | build(infra): add fraud-service/Dockerfile |
+| 69 | `fraud-service/app/__init__.py` | `cdfdef44ef38` | feat(fraud-service): add fraud-service/app/__init__.py |
+| 70 | `fraud-service/app/main.py` | `06ba41f2ce73` | feat(fraud-service): add fraud-service/app/main.py |
+| 71 | `fraud-service/app/predict.py` | `8b53b39c35b6` | feat(fraud-service): add fraud-service/app/predict.py |
+| 72 | `fraud-service/app/preprocessing.py` | `68ef6aba806e` | feat(fraud-service): add fraud-service/app/preprocessing.py |
+| 73 | `fraud-service/app/schemas.py` | `e9e23a54fb99` | feat(fraud-service): add fraud-service/app/schemas.py |
+| 74 | `fraud-service/models/fraud_model.joblib` | `68710db11cd5` | feat(ml): add fraud-service/models/fraud_model.joblib |
+| 75 | `fraud-service/models/metrics.json` | `8a7d1c3299c5` | feat(ml): add fraud-service/models/metrics.json |
+| 76 | `fraud-service/models/model_metadata.json` | `224c7886b68a` | feat(ml): add fraud-service/models/model_metadata.json |
+| 77 | `fraud-service/models/preprocessor.joblib` | `ca986dc379da` | feat(ml): add fraud-service/models/preprocessor.joblib |
+| 78 | `fraud-service/pytest.ini` | `437de743d2d8` | feat(fraud-service): add fraud-service/pytest.ini |
+| 79 | `fraud-service/requirements-ml-extras.txt` | `d9e63637add9` | feat(fraud-service): add fraud-service/requirements-ml-extras.txt |
+| 80 | `fraud-service/requirements.txt` | `f951f2e522aa` | chore(fraud-service): add fraud-service/requirements.txt |
+| 81 | `fraud-service/tests/test_api.py` | `f77d77570440` | test(fraud-service): add fraud-service/tests/test_api.py |
+| 82 | `fraud-service/training/__init__.py` | `2002b3a9ba21` | feat(ml): add fraud-service/training/__init__.py |
+| 83 | `fraud-service/training/evaluate.py` | `cb4f4d73beaa` | feat(ml): add fraud-service/training/evaluate.py |
+| 84 | `fraud-service/training/samples/synthetic_sample.csv` | `b1d14ebd80d8` | feat(ml): add fraud-service/training/samples/synthetic_sample.csv |
+| 85 | `fraud-service/training/synthetic.py` | `ead9975faf97` | feat(ml): add fraud-service/training/synthetic.py |
+| 86 | `fraud-service/training/train.py` | `3af9e85dfd79` | feat(ml): add fraud-service/training/train.py |
+| 87 | `frontend/.dockerignore` | `975514ccc73d` | build(infra): add frontend/.dockerignore |
+| 88 | `frontend/.env.example` | `7791cf3b798a` | docs(config): add frontend/.env.example |
+| 89 | `frontend/Dockerfile` | `7e998b9e9b1e` | build(infra): add frontend/Dockerfile |
+| 90 | `frontend/index.html` | `6fd5fe77c392` | feat(frontend): add frontend/index.html |
+| 91 | `frontend/nginx.conf` | `32e1996e2dab` | build(infra): add frontend/nginx.conf |
+| 92 | `frontend/package-lock.json` | `f01d17a3726b` | chore(frontend): add frontend/package-lock.json |
+| 93 | `frontend/package.json` | `3b7eafa8395f` | chore(frontend): add frontend/package.json |
+| 94 | `frontend/src/App.jsx` | `17bd77d59cf5` | feat(frontend): add frontend/src/App.jsx |
+| 95 | `frontend/src/components/auth/AuthShell.jsx` | `7b3af35b131e` | feat(frontend): add frontend/src/components/auth/AuthShell.jsx |
+| 96 | `frontend/src/components/charts/ActivityChart.jsx` | `ce78927c7415` | feat(frontend): add frontend/src/components/charts/ActivityChart.jsx |
+| 97 | `frontend/src/components/charts/AmountBucketsChart.jsx` | `a3edaf121f56` | feat(frontend): add frontend/src/components/charts/AmountBucketsChart.jsx |
+| 98 | `frontend/src/components/charts/ChartTooltip.jsx` | `4315ec5d0b7a` | feat(frontend): add frontend/src/components/charts/ChartTooltip.jsx |
+| 99 | `frontend/src/components/charts/RiskDistributionChart.jsx` | `1204d309ad05` | feat(frontend): add frontend/src/components/charts/RiskDistributionChart.jsx |
+| 100 | `frontend/src/components/charts/RuleFrequencyChart.jsx` | `3f65e59ceef0` | feat(frontend): add frontend/src/components/charts/RuleFrequencyChart.jsx |
+| 101 | `frontend/src/components/charts/StatusBarChart.jsx` | `93742e9e1ec8` | feat(frontend): add frontend/src/components/charts/StatusBarChart.jsx |
+| 102 | `frontend/src/components/charts/VolumeChart.jsx` | `fd75405ef3d6` | feat(frontend): add frontend/src/components/charts/VolumeChart.jsx |
+| 103 | `frontend/src/components/layout/AppLayout.jsx` | `dd2add2a4ec1` | feat(frontend): add frontend/src/components/layout/AppLayout.jsx |
+| 104 | `frontend/src/components/layout/Brand.jsx` | `ab2003187e39` | feat(frontend): add frontend/src/components/layout/Brand.jsx |
+| 105 | `frontend/src/components/layout/ProtectedRoute.jsx` | `bba63913d6d2` | feat(frontend): add frontend/src/components/layout/ProtectedRoute.jsx |
+| 106 | `frontend/src/components/layout/Sidebar.jsx` | `b86eef996cb2` | feat(frontend): add frontend/src/components/layout/Sidebar.jsx |
+| 107 | `frontend/src/components/layout/Topbar.jsx` | `c5640c040b0a` | feat(frontend): add frontend/src/components/layout/Topbar.jsx |
+| 108 | `frontend/src/components/transactions/RiskBadge.jsx` | `4eb3e6e26e26` | feat(frontend): add frontend/src/components/transactions/RiskBadge.jsx |
+| 109 | `frontend/src/components/transactions/RiskReasons.jsx` | `af1237f6a562` | feat(frontend): add frontend/src/components/transactions/RiskReasons.jsx |
+| 110 | `frontend/src/components/transactions/RiskScoreBar.jsx` | `72ebcf3196b9` | feat(frontend): add frontend/src/components/transactions/RiskScoreBar.jsx |
+| 111 | `frontend/src/components/transactions/StatusBadge.jsx` | `fcaf2764e808` | feat(frontend): add frontend/src/components/transactions/StatusBadge.jsx |
+| 112 | `frontend/src/components/transactions/TransactionTable.jsx` | `8799c240bed4` | feat(frontend): add frontend/src/components/transactions/TransactionTable.jsx |
+| 113 | `frontend/src/components/ui/Badge.jsx` | `6f3d7280adf1` | feat(frontend): add frontend/src/components/ui/Badge.jsx |
+| 114 | `frontend/src/components/ui/Button.jsx` | `d2725541ca1d` | feat(frontend): add frontend/src/components/ui/Button.jsx |
+| 115 | `frontend/src/components/ui/Card.jsx` | `fe75b0f466d7` | feat(frontend): add frontend/src/components/ui/Card.jsx |
+| 116 | `frontend/src/components/ui/ConfirmDialog.jsx` | `9332b64c3edc` | feat(frontend): add frontend/src/components/ui/ConfirmDialog.jsx |
+| 117 | `frontend/src/components/ui/EmptyState.jsx` | `724cdc40f710` | feat(frontend): add frontend/src/components/ui/EmptyState.jsx |
+| 118 | `frontend/src/components/ui/ErrorState.jsx` | `5c14043f08c2` | feat(frontend): add frontend/src/components/ui/ErrorState.jsx |
+| 119 | `frontend/src/components/ui/FullPageLoader.jsx` | `9c6ee294ee6c` | feat(frontend): add frontend/src/components/ui/FullPageLoader.jsx |
+| 120 | `frontend/src/components/ui/Input.jsx` | `144ef29e1fab` | feat(frontend): add frontend/src/components/ui/Input.jsx |
+| 121 | `frontend/src/components/ui/Modal.jsx` | `c443a306953f` | feat(frontend): add frontend/src/components/ui/Modal.jsx |
+| 122 | `frontend/src/components/ui/PageHeader.jsx` | `6b7c73b69525` | feat(frontend): add frontend/src/components/ui/PageHeader.jsx |
+| 123 | `frontend/src/components/ui/Pagination.jsx` | `22c36ab5337f` | feat(frontend): add frontend/src/components/ui/Pagination.jsx |
+| 124 | `frontend/src/components/ui/Select.jsx` | `6dd254939727` | feat(frontend): add frontend/src/components/ui/Select.jsx |
+| 125 | `frontend/src/components/ui/Skeleton.jsx` | `cf40187651b3` | feat(frontend): add frontend/src/components/ui/Skeleton.jsx |
+| 126 | `frontend/src/components/ui/StatCard.jsx` | `94e3404e3ca6` | feat(frontend): add frontend/src/components/ui/StatCard.jsx |
+| 127 | `frontend/src/context/AuthContext.jsx` | `ea7d6335bb68` | feat(frontend): add frontend/src/context/AuthContext.jsx |
+| 128 | `frontend/src/context/RealtimeContext.jsx` | `fe690cc9b2d3` | feat(frontend): add frontend/src/context/RealtimeContext.jsx |
+| 129 | `frontend/src/context/ToastContext.jsx` | `387481f182a4` | feat(frontend): add frontend/src/context/ToastContext.jsx |
+| 130 | `frontend/src/hooks/useAsyncData.js` | `219af267ae68` | feat(frontend): add frontend/src/hooks/useAsyncData.js |
+| 131 | `frontend/src/hooks/useDocumentTitle.js` | `cd8708339c44` | feat(frontend): add frontend/src/hooks/useDocumentTitle.js |
+| 132 | `frontend/src/index.css` | `7188a3db9978` | feat(frontend): add frontend/src/index.css |
+| 133 | `frontend/src/main.jsx` | `cb8f4814a78d` | feat(frontend): add frontend/src/main.jsx |
+| 134 | `frontend/src/pages/NotFoundPage.jsx` | `c599f0e10ef9` | feat(frontend): add frontend/src/pages/NotFoundPage.jsx |
+| 135 | `frontend/src/pages/ProfilePage.jsx` | `f39f5e842b6d` | feat(frontend): add frontend/src/pages/ProfilePage.jsx |
+| 136 | `frontend/src/pages/admin/AdminDashboardPage.jsx` | `c9e15ebdda66` | feat(frontend): add frontend/src/pages/admin/AdminDashboardPage.jsx |
+| 137 | `frontend/src/pages/admin/AdminTransactionsPage.jsx` | `d6825aca7845` | feat(frontend): add frontend/src/pages/admin/AdminTransactionsPage.jsx |
+| 138 | `frontend/src/pages/admin/AnalyticsPage.jsx` | `9eef3062c90c` | feat(frontend): add frontend/src/pages/admin/AnalyticsPage.jsx |
+| 139 | `frontend/src/pages/admin/FraudAlertsPage.jsx` | `312027245a3d` | feat(frontend): add frontend/src/pages/admin/FraudAlertsPage.jsx |
+| 140 | `frontend/src/pages/admin/InvestigationPage.jsx` | `83ab887dfe96` | feat(frontend): add frontend/src/pages/admin/InvestigationPage.jsx |
+| 141 | `frontend/src/pages/auth/LoginPage.jsx` | `6054f248f1b6` | feat(frontend): add frontend/src/pages/auth/LoginPage.jsx |
+| 142 | `frontend/src/pages/auth/RegisterPage.jsx` | `5931ec87c658` | feat(frontend): add frontend/src/pages/auth/RegisterPage.jsx |
+| 143 | `frontend/src/pages/customer/DashboardPage.jsx` | `ee7dc6e96ba5` | feat(frontend): add frontend/src/pages/customer/DashboardPage.jsx |
+| 144 | `frontend/src/pages/customer/TransactionDetailPage.jsx` | `8c868b861a39` | feat(frontend): add frontend/src/pages/customer/TransactionDetailPage.jsx |
+| 145 | `frontend/src/pages/customer/TransactionsPage.jsx` | `754b6ac7e0a7` | feat(frontend): add frontend/src/pages/customer/TransactionsPage.jsx |
+| 146 | `frontend/src/pages/customer/TransferPage.jsx` | `12ec8c90398a` | feat(frontend): add frontend/src/pages/customer/TransferPage.jsx |
+| 147 | `frontend/src/services/api.js` | `8f6f27a26c06` | feat(frontend): add frontend/src/services/api.js |
+| 148 | `frontend/src/services/socket.js` | `ad251b2648da` | feat(frontend): add frontend/src/services/socket.js |
+| 149 | `frontend/src/utils/cn.js` | `1ede908bcdff` | feat(frontend): add frontend/src/utils/cn.js |
+| 150 | `frontend/src/utils/constants.js` | `8de2df094b79` | feat(frontend): add frontend/src/utils/constants.js |
+| 151 | `frontend/src/utils/device.js` | `9aefe0529171` | feat(frontend): add frontend/src/utils/device.js |
+| 152 | `frontend/src/utils/format.js` | `9cc1afee350d` | feat(frontend): add frontend/src/utils/format.js |
+| 153 | `frontend/vite.config.js` | `af920910bacb` | feat(frontend): add frontend/vite.config.js |
+| 154 | `infra/mongo-init.sh` | `5f10be5177f9` | build(infra): add infra/mongo-init.sh |
+| 155 | `README.md` | `5e4f868afc05` | docs: write project README with setup and API reference |
+
+Total: **155** per-file commits.
+
+Verify any entry with `git show <commit>` or list the history with `git log --oneline --reverse`.

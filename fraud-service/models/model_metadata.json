@@ -1,0 +1,143 @@
+{
+  "model_type": "RandomForestClassifier",
+  "model_version": "20261104205357",
+  "trained_at": "2026-11-04T20:53:57.735119+00:00",
+  "target": "is_fraud",
+  "features": [
+    "amount",
+    "transaction_count_10m",
+    "transaction_count_1h",
+    "is_new_device",
+    "is_unusual_location",
+    "failed_attempts_15m",
+    "hour_of_day",
+    "day_of_week",
+    "avg_amount_30d",
+    "amount_to_balance_ratio",
+    "transaction_type"
+  ],
+  "numeric_features": [
+    "amount",
+    "transaction_count_10m",
+    "transaction_count_1h",
+    "is_new_device",
+    "is_unusual_location",
+    "failed_attempts_15m",
+    "hour_of_day",
+    "day_of_week",
+    "avg_amount_30d",
+    "amount_to_balance_ratio"
+  ],
+  "categorical_features": [
+    "transaction_type"
+  ],
+  "transaction_types": [
+    "TRANSFER",
+    "PAYMENT",
+    "CASH_OUT",
+    "CASH_IN",
+    "DEBIT"
+  ],
+  "threshold": 0.5,
+  "dataset": {
+    "source": "synthetic_paysim_style",
+    "synthetic": true,
+    "samples": 120000,
+    "fraud_rate": 0.020317,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "metrics": {
+    "threshold": 0.5,
+    "accuracy": 0.973625,
+    "precision": 0.4108241082410824,
+    "recall": 0.6844262295081968,
+    "f1_score": 0.5134511913912375,
+    "roc_auc": 0.9761361829885263,
+    "pr_auc": 0.5366159056110482,
+    "confusion_matrix": {
+      "true_negative": 23033,
+      "false_positive": 479,
+      "false_negative": 154,
+      "true_positive": 334
+    },
+    "classification_report": {
+      "legitimate": {
+        "precision": 0.9933583473498081,
+        "recall": 0.9796274242939775,
+        "f1_score": 0.9864451058909184
+      },
+      "fraud": {
+        "precision": 0.4108241082410824,
+        "recall": 0.6844262295081968,
+        "f1_score": 0.5134511913912375
+      }
+    },
+    "test_samples": 24000,
+    "test_fraud_cases": 488
+  },
+  "top_features": [
+    {
+      "feature": "numeric__amount_to_balance_ratio",
+      "importance": 0.264911
+    },
+    {
+      "feature": "numeric__amount",
+      "importance": 0.261097
+    },
+    {
+      "feature": "numeric__transaction_count_10m",
+      "importance": 0.180201
+    },
+    {
+      "feature": "numeric__transaction_count_1h",
+      "importance": 0.111334
+    },
+    {
+      "feature": "numeric__avg_amount_30d",
+      "importance": 0.055224
+    },
+    {
+      "feature": "numeric__hour_of_day",
+      "importance": 0.030603
+    },
+    {
+      "feature": "numeric__is_new_device",
+      "importance": 0.026544
+    },
+    {
+      "feature": "numeric__is_unusual_location",
+      "importance": 0.019598
+    },
+    {
+      "feature": "numeric__day_of_week",
+      "importance": 0.016642
+    },
+    {
+      "feature": "numeric__failed_attempts_15m",
+      "importance": 0.01565
+    },
+    {
+      "feature": "categorical__transaction_type_CASH_OUT",
+      "importance": 0.004311
+    },
+    {
+      "feature": "categorical__transaction_type_PAYMENT",
+      "importance": 0.004253
+    },
+    {
+      "feature": "categorical__transaction_type_TRANSFER",
+      "importance": 0.004146
+    },
+    {
+      "feature": "categorical__transaction_type_CASH_IN",
+      "importance": 0.002833
+    },
+    {
+      "feature": "categorical__transaction_type_DEBIT",
+      "importance": 0.002653
+    }
+  ],
+  "sklearn_version": "1.9.1",
+  "note": "Metrics are measured on a held-out synthetic test split. They do not represent real-world fraud detection performance."
+}

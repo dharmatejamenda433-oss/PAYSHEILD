@@ -1,0 +1,12 @@
+process.env.NODE_ENV = 'test';
+process.env.JWT_SECRET = 'test-secret-key-that-is-at-least-32-characters-long';
+process.env.MONGODB_URI = 'mongodb://127.0.0.1:27018/payshield_test?replicaSet=rs0';
+process.env.REDIS_URL = 'redis://127.0.0.1:6399';
+process.env.FRAUD_SERVICE_URL = 'http://127.0.0.1:9';
+process.env.FRAUD_SERVICE_TIMEOUT_MS = '1000';
+process.env.FRONTEND_URL = 'http://localhost:5173';
+process.env.STARTING_BALANCE_PAISE = '5000000';
+process.env.RISK_MEDIUM_THRESHOLD = '30';
+process.env.RISK_HIGH_THRESHOLD = '70';
+process.env.HIGH_RISK_ACTION = 'review';
+process.env.LARGE_AMOUNT_THRESHOLD_PAISE = '2500000';

@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files (never commit real secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test / coverage output
+coverage/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+fraud-service/.venv/
+
+# Local database / scratch data
+.local/
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Model training raw datasets (large files, not committed)
+fraud-service/training/data/*.csv
+fraud-service/training/data/*.zip

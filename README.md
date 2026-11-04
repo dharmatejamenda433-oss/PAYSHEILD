@@ -219,7 +219,8 @@ network. Set `JWT_SECRET` in `.env` before exposing the stack beyond your machin
 
 - Node.js 20+ (verified on Node 24).
 - MongoDB running as a replica set. Multi-document transactions are required.
-- Redis 7 (optional; the API logs a warning and uses an in-process fallback if absent).
+- Redis 7 via the included Docker image (recommended) or a local install; the API falls back
+  to an in-process store if Redis is absent.
 - Python 3.10+ (verified on 3.13).
 
 ### 1. MongoDB replica set
@@ -237,6 +238,18 @@ mongosh --port 27018 --eval 'rs.initiate({_id:"rs0",members:[{_id:0,host:"127.0.
 
 An existing standalone server on `27017` will **not** support transactions. Either add it to a
 replica set or point `MONGODB_URI` at a replica-set deployment.
+
+#### Using MongoDB Atlas instead
+
+1. Create a free M0 cluster in Atlas.
+2. Create a database user under **Database Access**.
+3. Allow your IP under **Network Access**.
+4. Open **Connect → Drivers → Node.js** and copy the `mongodb+srv://…` string.
+5. Add the database name `/payshield` before the `?`, then put the full URI in `backend/.env`
+   as `MONGODB_URI`.
+
+Atlas is already a replica set, so no `rs0` setup is needed. Do not add `replicaSet=rs0` to an
+Atlas URI.
 
 ### 2. Fraud service
 
@@ -259,11 +272,23 @@ The service intentionally returns a deterministic, rule-only fallback when no mo
 present. That fallback is labelled `fallback: true` in the response and is **not** a trained
 prediction.
 
-### 3. Backend
+### 3. Redis with Docker
+
+From the repository root:
+
+```bash
+docker compose up -d redis
+```
+
+This starts `redis:7-alpine` and publishes port `6379` to your computer. The default
+`REDIS_URL=redis://127.0.0.1:6379` then connects the locally running backend to the container.
+Redis data is kept in the `payshield-redis` Docker volume.
+
+### 4. Backend
 
 ```bash
 cd backend
-cp .env.example .env               # edit MONGODB_URI / JWT_SECRET if needed
+cp .env.example .env               # paste your Atlas URI and JWT_SECRET
 npm install
 npm run seed
 npm run dev                        # http://localhost:5000
@@ -273,7 +298,7 @@ The seed script is safe to re-run: it creates the admin, `asha@example.com`,
 `ravi@example.com` and gives each customer a simulated ₹100,000 wallet
 (`DEMO_BALANCE_PAISE=10000000`) when the account does not already exist.
 
-### 4. Frontend
+### 5. Frontend
 
 ```bash
 cd frontend

@@ -28,6 +28,8 @@ services:
   redis:
     image: redis:7-alpine
     command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
     volumes:
       - payshield-redis:/data
     healthcheck:
@@ -53,7 +55,8 @@ services:
     environment:
       NODE_ENV: production
       PORT: "5000"
-      MONGODB_URI: mongodb://mongo:27017/payshield?replicaSet=rs0
+      # Set MONGODB_URI in the root .env to use Atlas; otherwise local mongo is used.
+      MONGODB_URI: ${MONGODB_URI:-mongodb://mongo:27017/payshield?replicaSet=rs0}
       JWT_SECRET: ${JWT_SECRET:-payshield-docker-development-secret-change-before-public-use}
       JWT_EXPIRES_IN: 1d
       REDIS_URL: redis://redis:6379

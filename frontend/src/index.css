@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  --color-navy-50: #f1f5fc;
+  --color-navy-100: #e0e9f8;
+  --color-navy-200: #c3d5f1;
+  --color-navy-300: #95b6e5;
+  --color-navy-400: #6090d5;
+  --color-navy-500: #3c70c0;
+  --color-navy-600: #2b57a3;
+  --color-navy-700: #254784;
+  --color-navy-800: #1c3462;
+  --color-navy-900: #0b1b3a;
+  --color-navy-950: #060f24;
+
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
+
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04),
+    0 8px 24px -12px rgb(15 23 42 / 0.12);
+  --shadow-lifted: 0 18px 50px -20px rgb(11 27 58 / 0.35);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-slate-50 font-sans text-slate-900;
+  }
+
+  ::selection {
+    @apply bg-blue-100 text-navy-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-500;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-card;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 disabled:cursor-not-allowed disabled:bg-slate-100;
+  }
+
+  .table-scroll {
+    @apply -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0;
+  }
+
+  .skeleton-shimmer {
+    background-image: linear-gradient(
+      90deg,
+      rgb(241 245 249) 0%,
+      rgb(226 232 240) 45%,
+      rgb(241 245 249) 90%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.28s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .skeleton-shimmer {
+    animation: none;
+  }
+}
